@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Productos | Dulce Tentación</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    /* ====== Colores y estilo base ====== */
+    :root {
+      --bg: #fff7ed;
+      --text: #3e2723;
+      --muted: #6b4f4f;
+      --primary: #d97706;
+      --card: #ffffff;
+      --shadow: 0 8px 25px rgba(62, 39, 35, 0.2);
+      --radius: 16px;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    /* ====== Navegación ====== */
+    nav {
+      background: var(--text);
+      color: #fff;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      box-shadow: var(--shadow);
+    }
+
+    .nav-inner {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 12px 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand {
+      font-weight: bold;
+      font-size: 1.3rem;
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .links a {
+      color: #ffe8d6;
+      text-decoration: none;
+      margin-left: 12px;
+      padding: 6px 10px;
+      border-radius: 10px;
+      transition: background 0.2s;
+    }
+
+    .links a:hover {
+      background: rgba(255,255,255,0.1);
+      color: #fff;
+    }
+
+    /* ====== Contenido principal ====== */
+    main {
+      max-width: 1000px;
+      margin: 40px auto 60px;
+      padding: 0 18px;
+    }
+
+    h1 {
+      text-align: center;
+      color: var(--primary);
+      margin-bottom: 40px;
+    }
+
+    .productos-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 16px;
+      text-align: center;
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 12px;
+    }
+
+    .card h3 {
+      margin: 8px 0 6px;
+      color: var(--primary);
+    }
+
+    .card p {
+      color: var(--muted);
+      margin: 0 0 10px;
+      font-size: 0.95rem;
+    }
+
+    .price {
+      font-weight: bold;
+      font-size: 1.1rem;
+      color: var(--text);
+      margin-bottom: 10px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--primary);
+      color: white;
+      text-decoration: none;
+      padding: 8px 14px;
+      border-radius: 10px;
+      font-weight: 600;
+      box-shadow: 0 6px 15px rgba(217,119,6,0.25);
+    }
+
+    /* ====== Footer ====== */
+    footer {
+      text-align: center;
+      color: var(--muted);
+      padding: 30px 18px 50px;
+      font-size: 0.9rem;
+    }
+
+  </style>
+</head>
+
+<body>
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <a class="brand" href="index.html">Dulce Tentación</a>
+      <div class="links">
+        <a href="index.html">Inicio</a>
+        <a href="productos.html">Productos</a>
+        <a href="contacto.html">Contacto</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- CONTENIDO -->
+  <main>
+    <h1>Nuestras Facturas y Delicias 🥐</h1>
+
+    <div class="productos-grid">
+      <div class="card">
+        <img src="img/medialunas.jpg" alt="Medialunas de manteca">
+        <h3>Medialunas de manteca</h3>
+        <p>Suaves, doradas y con un toque de almíbar. Perfectas para acompañar un mate o café.</p>
+        <div class="price">€1,20 unidad</div>
+        <a class="btn" href="contacto.html">Pedir ahora</a>
+      </div>
+
+      <div class="card">
+        <img src="img/vigilantes.jpg" alt="Vigilantes argentinos">
+        <h3>Vigilantes</h3>
+        <p>Clásicos alargados y dulces, con el sabor de las panaderías de barrio.</p>
+        <div class="price">€1,00 unidad</div>
+        <a class="btn" href="contacto.html">Pedir ahora</a>
+      </div>
+
+      <div class="card">
+        <img src="img/tortita-negra.jpg" alt="Tortita negra">
+        <h3>Tortita negra</h3>
+        <p>Pan suave cubierto de azúcar negra caramelizada. Un clásico porteño irresistible.</p>
+        <div class="price">€1,30 unidad</div>
+        <a class="btn" href="contacto.html">Pedir ahora</a>
+      </div>
+
+      <div class="card">
+        <img src="img/dulce-leche.jpg" alt="Factura con dulce de leche">
+        <h3>Factura con dulce de leche</h3>
+        <p>Rellena con nuestro dulce de leche artesanal, hecha cada mañana con cariño.</p>
+        <div class="price">€1,50 unidad</div>
+        <a class="btn" href="contacto.html">Pedir ahora</a>
+      </div>
+
+      <div class="card">
+        <img src="img/pan-casero.jpg" alt="Pan casero argentino">
+        <h3>Pan casero</h3>
+        <p>Tradicional pan argentino, ideal para acompañar comidas o disfrutar solo.</p>
+        <div class="price">€3,00 / kg</div>
+        <a class="btn" href="contacto.html">Pedir ahora</a>
+      </div>
+    </div>
+
+    <div class="panel" style="margin-top:40px; background:#fff0e0; border-radius:16px; padding:20px;">
+      <h3>¿Sabías que...?</h3>
+      <p>Las <strong>facturas argentinas</strong> fueron creadas por panaderos anarquistas en el siglo XIX, quienes usaban los nombres de las piezas para burlarse de las autoridades y la iglesia. ¡Una historia tan sabrosa como su sabor!</p>
+      <p>Leé más en <a href="https://es.wikipedia.org/wiki/Factura_(panadería)" target="_blank">Wikipedia</a>.</p>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    © <span id="y"></span> Dulce Tentación — Panadería Argentina 🍞  
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
