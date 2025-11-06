@@ -137,11 +137,24 @@
       color: var(--primary);
     }
 
-    iframe {
+    /* ====== Video responsive ====== */
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%; /* Mantiene relación 16:9 */
+      height: 0;
+      overflow: hidden;
       border-radius: var(--radius);
-      width: 100%;
-      height: 315px;
       box-shadow: var(--shadow);
+    }
+
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+      border-radius: var(--radius);
     }
 
     /* ====== Footer ====== */
@@ -201,7 +214,14 @@
 
     <div class="panel">
       <h3>Video: Cómo hacemos nuestras medialunas</h3>
-      <iframe src="https://www.youtube.com/watch?v=COLPxUQaRv4" title="Cómo hacer medialunas argentinas" allowfullscreen></iframe>
+      <div class="video-container">
+        <iframe 
+          src="https://www.youtube.com/embed/COLPxUQaRv4" 
+          title="Cómo hacer medialunas argentinas"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
     </div>
 
     <div class="panel">
@@ -224,6 +244,8 @@
   </script>
 </body>
 </html>
+
+
 
 
 
